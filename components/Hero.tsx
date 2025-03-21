@@ -95,7 +95,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="max-w-2xl mx-auto mb-10 px-6 py-4 bg-white/50 backdrop-blur-sm rounded-lg shadow-sm border border-primary/10"
           >
-            <p className="text-gray-700 italic">"{quote}"</p>
+            <p className="text-gray-700 italic">&quot;{quote}&quot;</p>
           </motion.div>
           
           <motion.p

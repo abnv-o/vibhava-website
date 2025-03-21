@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar, Sparkles, Lock, Clock, AlertCircle } from "lucide-react";
+import { Sparkles, AlertCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Events = () => {
@@ -57,22 +57,14 @@ const Events = () => {
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
             >
-              <Lock className="w-full h-full text-primary/30" />
-            </motion.div>
-            <motion.div 
-              className="absolute inset-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", delay: 1 }}
-            >
-              <Sparkles className="w-full h-full text-primary/70" />
+              <Sparkles className="w-full h-full text-primary/30" />
             </motion.div>
           </motion.div>
           
           <h3 className="text-3xl font-bold text-center mb-4">Events Yet To Be Revealed</h3>
           
           <p className="text-gray-600 text-center mb-8 max-w-xl mx-auto">
-            We're crafting an exciting lineup of innovative events, competitions, and workshops. 
+            We&apos;re crafting an exciting lineup of innovative events, competitions, and workshops. 
             Stay tuned as we unveil our program soon!
           </p>
           

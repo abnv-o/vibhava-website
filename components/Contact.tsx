@@ -1,50 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Globe, Download, Facebook, Instagram, Linkedin } from "lucide-react";
-import Image from "next/image";
+import { Mail, Phone, MapPin, Download, Instagram, Linkedin } from "lucide-react";
+
+const contactPersons = [
+  {
+    name: "Romal Josbin",
+    role: "Convener",
+    phone: "97781 18693",
+    tel: "tel:+919778118693",
+  },
+  {
+    name: "Drisya P",
+    role: "Head of Outreach",
+    phone: "97464 88681",
+    tel: "tel:+919746488681",
+  },
+];
+
+const socialLinks = [
+  {
+    name: "Website",
+    url: "https://vibhava.cusat.co.in",
+    icon: <Mail className="w-5 h-5" />,
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/vibhava.cusat",
+    icon: <Instagram className="w-5 h-5" />,
+  },
+  {
+    name: "Email",
+    url: "mailto:vibhava@cusat.ac.in",
+    icon: <Mail className="w-5 h-5" />,
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com/company/vibhavacusat/",
+    icon: <Linkedin className="w-5 h-5" />,
+  },
+];
 
 const Contact = () => {
-  const contactPersons = [
-    {
-      name: "Romal Josbin",
-      role: "Convener",
-      phone: "97781 18693",
-      phoneLink: "tel:+919778118693",
-    },
-    {
-      name: "Drisya P",
-      role: "Head of Outreach",
-      phone: "97464 88681",
-      phoneLink: "tel:+919746488681",
-    },
-  ];
-
-  const socialLinks = [
-    {
-      icon: <Globe className="w-6 h-6 text-primary" />,
-      label: "Vibhava.cusat.co.in",
-      href: "https://vibhava.cusat.co.in",
-    },
-    {
-      icon: <Instagram className="w-6 h-6 text-primary" />,
-      label: "www.instagram.com/vibhava.cusat",
-      href: "https://www.instagram.com/vibhava.cusat",
-    },
-    {
-      icon: <Mail className="w-6 h-6 text-primary" />,
-      label: "vibhava@cusat.ac.in",
-      href: "mailto:vibhava@cusat.ac.in",
-    },
-    {
-      icon: <Linkedin className="w-6 h-6 text-primary" />,
-      label: "linkedin.com/company/vibhavacusat/",
-      href: "https://linkedin.com/company/vibhavacusat/",
-    },
-  ];
-
   return (
-    <section className="min-h-screen bg-white relative overflow-hidden pt-24">
+    <section id="contact" className="py-24 bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
       <div className="absolute bottom-20 left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
@@ -86,7 +85,7 @@ const Contact = () => {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Details</h3>
               <div className="space-y-6">
-                {contactPersons.map((person, index) => (
+                {contactPersons.map((person) => (
                   <div key={person.name} className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Phone className="w-6 h-6 text-primary" />
@@ -94,7 +93,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">{person.name}</h4>
                       <p className="text-sm text-gray-500 mb-1">{person.role}</p>
-                      <a href={person.phoneLink} className="text-gray-600 hover:text-primary transition-colors">
+                      <a href={person.tel} className="text-gray-600 hover:text-primary transition-colors">
                         {person.phone}
                       </a>
                     </div>
@@ -113,7 +112,7 @@ const Contact = () => {
                 </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Globe className="w-6 h-6 text-primary" />
+                    <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Website</h4>
@@ -129,10 +128,10 @@ const Contact = () => {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow Us</h3>
               <div className="flex space-x-4">
-                {socialLinks.map((link, index) => (
+                {socialLinks.map((link) => (
                   <motion.a
-                    key={link.label}
-                    href={link.href}
+                    key={link.name}
+                    href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -3 }}

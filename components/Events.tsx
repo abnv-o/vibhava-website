@@ -1,7 +1,7 @@
 "use client";
 
-import { Sparkles, AlertCircle, GraduationCap, Users, Rocket, Clock, Calendar, Users2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { GraduationCap, Users, Rocket, Clock, Calendar, Users2 } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 

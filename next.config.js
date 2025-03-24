@@ -5,10 +5,9 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
       },
     ],
+    unoptimized: true,
   },
 };
 

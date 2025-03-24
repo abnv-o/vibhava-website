@@ -107,10 +107,10 @@ const About = () => {
           >
             <div className="prose prose-lg text-gray-600">
               <p>
-                VIBHAVA Innovation Summit 2024 is a one-day extravaganza that brings together the brightest minds in technology and entrepreneurship. This flagship event at School of Engineering, CUSAT, serves as a platform for knowledge exchange, networking, and innovation.
+                VIBHAVA Innovation Summit 2025 is a one-day extravaganza that brings together the brightest minds in technology and entrepreneurship. This flagship event at School of Engineering, CUSAT, serves as a platform for knowledge exchange, networking, and innovation.
               </p>
               <p className="mt-4">
-                The summit features an exciting lineup of workshops, panel discussions, and startup stories, designed to inspire and empower the next generation of innovators. Whether you're a student, professional, or entrepreneur, VIBHAVA offers unique opportunities to learn, connect, and grow.
+                The summit features an exciting lineup of workshops, panel discussions, and startup stories, designed to inspire and empower the next generation of innovators. Whether you&apos;re a student, professional, or entrepreneur, VIBHAVA offers unique opportunities to learn, connect, and grow.
               </p>
             </div>
 

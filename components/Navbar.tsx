@@ -2,6 +2,8 @@
 
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -23,17 +25,30 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? "bg-white/90 shadow-md backdrop-blur-md" : "bg-transparent"
-    }`}>
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <a href="/#" className="text-primary font-bold text-xl relative group">
-              <Image src="/VB_lg_blk.svg" alt="VIBHAVA" width={45} height={45} />
-              
-            </a>
-          </div>
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/VB_lg_blk.svg"
+              alt="VIBHAVA Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = "https://placehold.co/80x80/61c2a6/ffffff?text=V";
+              }}
+            />
+            {/* <span className="text-xl font-bold text-gray-900">VIBHAVA</span> */}
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -81,7 +96,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

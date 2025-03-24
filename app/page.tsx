@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Events from "@/components/Events";
 import Speakers from "@/components/Speakers";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <About />
       <Events />
       <Speakers />
-      {/* <Contact /> */}
       <Footer />
     </main>
   );

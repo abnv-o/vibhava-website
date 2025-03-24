@@ -16,6 +16,7 @@ module.exports = {
         "float": "float 6s ease-in-out infinite",
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "shimmer": "shimmer 2s linear infinite",
+        "marquee": "marquee 25s linear infinite",
       },
       keyframes: {
         float: {
@@ -25,6 +26,10 @@ module.exports = {
         shimmer: {
           '0%': { backgroundPosition: '-400px 0' },
           '100%': { backgroundPosition: '400px 0' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },

@@ -1,0 +1,19 @@
+{
+  "name": "VIBHAVA - Innovation Summit 2024",
+  "short_name": "VIBHAVA",
+  "icons": [
+    {
+      "src": "/favicon/arw.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon/arw.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+} 

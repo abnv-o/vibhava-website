@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 419 295" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-366.647,-231.306)">
+        <g id="lg--main" transform="matrix(1.75866,0,0,1.75866,-103.424,-604.498)">
+            <g transform="matrix(0.686972,7.62692e-17,-7.62692e-17,0.686972,216.874,237.927)">
+                <path d="M332.687,373.648L360.873,345.462L405.881,345.462L405.881,390.469L377.695,418.655L377.695,373.648L332.687,373.648Z" style="fill:rgb(89,203,171);"/>
+            </g>
+            <g transform="matrix(1.06747,0,0,1.06747,124.584,38.2574)">
+                <text x="133.085px" y="469.374px" style="font-family:'ProductSans-Bold', 'Product Sans', sans-serif;font-weight:700;font-size:50px;">V<tspan x="166.085px 179.035px 208.785px 237.235px 263.485px 290.835px " y="469.374px 469.374px 469.374px 469.374px 469.374px 469.374px ">ibhava</tspan></text>
+                <text x="133.085px" y="517.28px" style="font-family:'ProductSans-Regular', 'Product Sans', sans-serif;font-size:50px;">Inno<tspan x="226.585px 250.985px 275.985px 293.935px 304.685px 332.185px " y="517.28px 517.28px 517.28px 517.28px 517.28px 517.28px ">vation</tspan></text>
+                <g transform="matrix(50,0,0,50,300.735,565.187)">
+                </g>
+                <text x="133.085px" y="565.187px" style="font-family:'ProductSans-Regular', 'Product Sans', sans-serif;font-size:50px;">S<tspan x="159.985px " y="565.187px ">u</tspan>mmi<tspan x="283.035px " y="565.187px ">t</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,33 +1,56 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Globe, Download, Facebook, Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 const Contact = () => {
-  const contactInfo = [
+  const contactPersons = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      content: "vibhava@cusat.ac.in",
+      name: "Romal Josbin",
+      role: "Convener",
+      phone: "97781 18693",
+      phoneLink: "tel:+919778118693",
+    },
+    {
+      name: "Drisya P",
+      role: "Head of Outreach",
+      phone: "97464 88681",
+      phoneLink: "tel:+919746488681",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: <Globe className="w-6 h-6 text-primary" />,
+      label: "Vibhava.cusat.co.in",
+      href: "https://vibhava.cusat.co.in",
+    },
+    {
+      icon: <Instagram className="w-6 h-6 text-primary" />,
+      label: "www.instagram.com/vibhava.cusat",
+      href: "https://www.instagram.com/vibhava.cusat",
+    },
+    {
+      icon: <Mail className="w-6 h-6 text-primary" />,
+      label: "vibhava@cusat.ac.in",
       href: "mailto:vibhava@cusat.ac.in",
     },
     {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Phone",
-      content: "+91 123 456 7890",
-      href: "tel:+911234567890",
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Location",
-      content: "School of Engineering, CUSAT",
-      href: "https://maps.google.com/?q=School+of+Engineering+CUSAT",
+      icon: <Linkedin className="w-6 h-6 text-primary" />,
+      label: "linkedin.com/company/vibhavacusat/",
+      href: "https://linkedin.com/company/vibhavacusat/",
     },
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen bg-white relative overflow-hidden pt-24">
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute bottom-20 left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,68 +58,149 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-block text-sm font-semibold text-primary px-3 py-1 rounded-full bg-primary/10 mb-3"
+          >
+            GET IN TOUCH
+          </motion.span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Contact Us
+          </h2>
           <div className="w-20 h-1 bg-primary mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {contactInfo.map((item, index) => (
-            <motion.a
-              key={item.title}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center"
-            >
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                <div className="text-primary">{item.icon}</div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
+          >
+            {/* Contact Details */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Details</h3>
+              <div className="space-y-6">
+                {contactPersons.map((person, index) => (
+                  <div key={person.name} className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">{person.name}</h4>
+                      <p className="text-sm text-gray-500 mb-1">{person.role}</p>
+                      <a href={person.phoneLink} className="text-gray-600 hover:text-primary transition-colors">
+                        {person.phone}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                    <a href="mailto:vibhava@cusat.ac.in" className="text-gray-600 hover:text-primary transition-colors">
+                      vibhava@cusat.ac.in
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Website</h4>
+                    <a href="https://vibhava.cusat.co.in" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
+                      vibhava.cusat.co.in
+                    </a>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-600">{item.content}</p>
-            </motion.a>
-          ))}
-        </div>
+            </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 bg-white rounded-2xl p-8 max-w-3xl mx-auto shadow-sm"
-        >
-          <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Send us a message</h3>
-          <form className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition" />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition" />
+            {/* Social Links */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow Us</h3>
+              <div className="flex space-x-4">
+                {socialLinks.map((link, index) => (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ y: -3 }}
+                    className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center hover:bg-primary/20 transition-colors"
+                  >
+                    {link.icon}
+                  </motion.a>
+                ))}
               </div>
             </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-              <textarea id="message" name="message" rows={4} placeholder="Your message here..." className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition"></textarea>
-            </div>
-            <motion.button
+
+            {/* Download Brochure Button */}
+            <motion.a
+              href="/brochure.pdf"
+              download
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              type="submit"
-              className="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors shadow-sm hover:shadow-md"
+              className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl group text-lg"
             >
-              Send Message
-            </motion.button>
-          </form>
-        </motion.div>
+              <Download className="w-6 h-6 mr-3" />
+              Download Event Brochure
+            </motion.a>
+          </motion.div>
+
+          {/* Location Map */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Location</h3>
+            <div className="relative h-[400px] rounded-xl overflow-hidden mb-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.214196161891!2d76.32281937497697!3d10.045896090060724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c379e04e30d%3A0x71dd4da2e5396e51!2sSchool%20of%20Engineering%2C%20CUSAT!5e0!3m2!1sen!2sin!4v1710837058953!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-xl"
+              />
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
+                <p className="text-gray-600">
+                  School of Engineering, CUSAT<br />
+                  Kochi, Kerala<br />
+                  India - 682022
+                </p>
+                <a 
+                  href="https://maps.google.com/?q=School+of+Engineering+CUSAT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary-dark text-sm mt-2 inline-block"
+                >
+                  View on Google Maps →
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

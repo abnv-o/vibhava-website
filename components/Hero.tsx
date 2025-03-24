@@ -3,18 +3,17 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Rocket, Lightbulb, Code } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
   const [activeTech, setActiveTech] = useState(0);
   
-  // Reduced number of tech icons
   const techIcons = [
-    { icon: <Rocket size={24} />, label: "Startups" },
-    { icon: <Lightbulb size={24} />, label: "Ideas" },
-    { icon: <Code size={24} />, label: "Tech" },
+    { icon: <Rocket size={20} />, label: "Startups" },
+    { icon: <Lightbulb size={20} />, label: "Ideas" },
+    { icon: <Code size={20} />, label: "Tech" },
   ];
 
-  // Rotate through tech icons
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTech((prev) => (prev + 1) % techIcons.length);
@@ -22,7 +21,6 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [techIcons.length]);
 
-  // Simplified quote selection - just a single impactful quote
   const quote = "Innovation is the ability to see change as an opportunity - not a threat";
 
   return (
@@ -30,7 +28,7 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-primary/5"
     >
-      {/* Simplified background - just a subtle gradient with dots */}
+      {/* Background pattern */}
       <div className="absolute inset-0 opacity-10" 
         style={{ 
           backgroundImage: "radial-gradient(#61c2a6 1px, transparent 1px)",
@@ -46,7 +44,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6 relative h-10 flex justify-center"
+            className="mb-8 relative h-10 flex justify-center"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -55,7 +53,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center space-x-2 px-3 py-1.5 bg-primary/10 text-primary rounded-full"
+                className="inline-flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm text-primary rounded-full shadow-sm border border-primary/10"
               >
                 {techIcons[activeTech].icon}
                 <span className="font-medium text-sm">{techIcons[activeTech].label}</span>
@@ -63,62 +61,65 @@ const Hero = () => {
             </AnimatePresence>
           </motion.div>
           
-          {/* Main heading with simpler animation */}
-          <motion.h1 
-            className="text-6xl sm:text-7xl font-bold text-gray-900 mb-6 tracking-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          {/* Logo */}
+          <motion.div 
+            className="mb-8"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-primary">V</span>IBHAVA
-            <motion.div
-              className="h-1.5 w-20 bg-primary mx-auto mt-4"
-              initial={{ width: 0 }}
-              animate={{ width: 80 }}
-              transition={{ duration: 1, delay: 0.8 }}
+            <Image 
+              src="/VB_lg_blk.svg" 
+              alt="VIBHAVA" 
+              width={300} 
+              height={250} 
+              className="mx-auto"
+              priority
             />
-          </motion.h1>
+          </motion.div>
           
+          {/* Subtitle */}
           <motion.h2
-            className="text-xl sm:text-2xl text-gray-700 mb-8"
+            className="text-2xl sm:text-3xl text-gray-700 mb-6 font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-primary font-medium">Innovation</span> Summit 2024
+             {/* <span className="text-primary">Innovation</span> Summit 2024 */}
           </motion.h2>
           
-          {/* Single quote with nice styling */}
+          {/* Quote */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="max-w-2xl mx-auto mb-10 px-6 py-4 bg-white/50 backdrop-blur-sm rounded-lg shadow-sm border border-primary/10"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="max-w-2xl mx-auto mb-8 px-6 py-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-primary/10"
           >
-            <p className="text-gray-700 italic">&quot;{quote}&quot;</p>
+            <p className="text-gray-700 italic text-lg">&quot;{quote}&quot;</p>
           </motion.div>
           
+          {/* Description */}
           <motion.p
-            className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto"
+            className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
             Join us at the School of Engineering, CUSAT for a celebration of
             innovation, technology, and entrepreneurial excellence.
           </motion.p>
           
-          {/* Simplified CTA buttons */}
+          {/* CTA buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-all shadow-md"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition-all shadow-md hover:shadow-lg"
             >
               <span className="flex items-center">
                 Explore Events
@@ -129,18 +130,18 @@ const Hero = () => {
             </motion.button>
             
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-gray-800 border border-gray-200 px-8 py-3 rounded-lg font-medium hover:border-primary/50 transition-all shadow-sm"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-white text-gray-800 border border-gray-200 px-8 py-3 rounded-lg font-medium hover:border-primary/50 transition-all shadow-sm hover:shadow-md"
             >
               Register Interest
             </motion.button>
           </motion.div>
         </div>
 
-        {/* Simple decorative element */}
+        {/* Decorative elements */}
         <motion.div
-          className="absolute -z-10 h-64 w-64 rounded-full bg-primary/5 blur-3xl"
+          className="absolute -z-10 h-96 w-96 rounded-full bg-primary/5 blur-3xl"
           style={{ right: '5%', top: '20%' }}
           animate={{ 
             scale: [1, 1.2, 1],
@@ -149,7 +150,7 @@ const Hero = () => {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -z-10 h-64 w-64 rounded-full bg-primary/5 blur-3xl"
+          className="absolute -z-10 h-96 w-96 rounded-full bg-primary/5 blur-3xl"
           style={{ left: '5%', bottom: '10%' }}
           animate={{ 
             scale: [1.2, 1, 1.2],
@@ -159,7 +160,7 @@ const Hero = () => {
         />
       </div>
 
-      {/* Simplified scroll indicator */}
+      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0 }}

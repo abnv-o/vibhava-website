@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +17,9 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Events", href: "#events" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "Events", href: "/#events" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -28,9 +29,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <a href="#" className="text-primary font-bold text-xl relative group">
-              <span className="relative z-10">VIBHAVA</span>
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            <a href="/#" className="text-primary font-bold text-xl relative group">
+              <Image src="/VB_lg_blk.svg" alt="VIBHAVA" width={45} height={45} />
+              
             </a>
           </div>
 

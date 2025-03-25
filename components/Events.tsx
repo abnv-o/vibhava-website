@@ -59,15 +59,15 @@ const categories: Category[] = [
         capacity: "100 participants",
         registrationLink: "https://makemypass.com/event/workshop-3"
       },
-      {
-        title: "Design Thinking & Product Dev",
-        date: "March 27, 2025",
-        time: "10:30 AM - 1:30 PM",
-        description: "Art of creating ",
-        speaker: "ANIL G,IBM",
-        capacity: "50 participants",
-        registrationLink: "https://makemypass.com/event/design-workshop"
-      },
+      // {
+      //   title: "Design Thinking & Product Dev",
+      //   date: "March 27, 2025",
+      //   time: "10:30 AM - 1:30 PM",
+      //   description: "Art of creating ",
+      //   speaker: "ANIL G,IBM",
+      //   capacity: "50 participants",
+      //   registrationLink: "https://makemypass.com/event/design-workshop"
+      // },
     ],
   },
   {

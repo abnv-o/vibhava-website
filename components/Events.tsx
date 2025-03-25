@@ -11,6 +11,7 @@ interface BaseEvent {
   time: string;
   description: string;
   capacity: string;
+  registrationLink?: string;
 }
 
 interface SingleSpeakerEvent extends BaseEvent {
@@ -47,6 +48,7 @@ const categories: Category[] = [
         description: "LearnAI/ML techniques and best practices",
         speaker: "Alosh",
         capacity: "50 participants",
+        registrationLink: "https://makemypass.com/event/workshop-2"
       },
       {
         title: "Personal Finance Workshop",
@@ -55,6 +57,7 @@ const categories: Category[] = [
         description: "Master the art of Finance",
         speaker: "Sunil Mathayi",
         capacity: "100 participants",
+        registrationLink: "https://makemypass.com/event/workshop-3"
       },
       {
         title: "Design Thinking & Product Dev",
@@ -63,6 +66,7 @@ const categories: Category[] = [
         description: "Art of creating ",
         speaker: "ANIL G,IBM",
         capacity: "50 participants",
+        registrationLink: "https://makemypass.com/event/design-workshop"
       },
     ],
   },
@@ -73,20 +77,22 @@ const categories: Category[] = [
     description: "Engaging conversations with industry leaders",
     events: [
       {
-        title: "Tech",
+        title: "Revealing Soon",
         date: "March 27, 2025",
         time: "10:20 AM - 11:40 AM",
         description: "",
         speakers: ["Jacob thomas(TCS)", "Kohler(Kireap)", "Dhanya(Kirep)","Pawan (Urbanwind)","Meher(Moderator)",],
         capacity: "100 attendees",
+        registrationLink: "https://makemypass.com/event/panel-1"
       },
       {
-        title: "Entruprenur",
+        title: "Revealing Soon",
         date: "March 27, 2025",
         time: "1:20 PM - 2:30 PM",
         description: "",
         speakers: ["Saima Nadeem (Edhwi)", "Nadeem Ashraf(Karikk)", "sreepriya (pehiya) ","Cristhina Cheriyan (Moderator)"],
         capacity: "100 attendees",
+        registrationLink: "https://makemypass.com/event/panel-2"
       },
     ],
   },
@@ -98,11 +104,12 @@ const categories: Category[] = [
     events: [
       {
         title: "From Zero to Hero",
-        date: "March 19, 2024",
+        date: "March 27, 2025",
         time: "12:15 PM - 6:00 PM",
         description: "Success story of a tech startup founder",
         speaker: "Kaiff",
         capacity: "30 attendees",
+        registrationLink: "https://makemypass.com/event/startup-1"
       },
       // {
       //   title: "Scaling Your Business",
@@ -274,26 +281,40 @@ const Events = () => {
                       </div>
 
                       {/* Register Button */}
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="mt-auto bg-primary text-white py-2 rounded-lg font-medium hover:bg-primary-dark transition-colors shadow-sm flex items-center justify-center group text-sm"
-                      >
-                        <span>Register Now</span>
-                        <svg
-                          className="w-3.5 h-3.5 ml-1.5 transform group-hover:translate-x-1 transition-transform"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
+                      {event.registrationLink ? (
+                        <motion.a
+                          href={event.registrationLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="mt-auto bg-primary text-white py-2 rounded-lg font-medium hover:bg-primary-dark transition-colors shadow-sm flex items-center justify-center group text-sm"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </motion.button>
+                          <span>Register Now</span>
+                          <svg
+                            className="w-3.5 h-3.5 ml-1.5 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </motion.a>
+                      ) : (
+                        <motion.button
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="mt-auto bg-gray-200 text-gray-600 py-2 rounded-lg font-medium transition-colors shadow-sm flex items-center justify-center group text-sm"
+                          disabled
+                        >
+                          <span>Registration Opening Soon</span>
+                        </motion.button>
+                      )}
                     </div>
                   </motion.div>
                 ))}

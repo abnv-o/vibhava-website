@@ -67,7 +67,7 @@ const categories: Category[] = [
         description: "Art of creating ",
         speaker: "Gokuldas P G",
         capacity: "50 participants",
-        registrationLink: "https://makemypass.com/event/design-workshop"
+        registrationLink: "https://makemypass.com/event/workshop1"
       },
     ],
   },
@@ -84,7 +84,7 @@ const categories: Category[] = [
         description: "",
         speakers: ["Jacob thomas(TCS)", "Kerstin Silvia Koehler(Kireap)", "Dr.Dhanya K Sudish (Kireap)","Pawan Seshadri (Urbanwind)","Moosa Meher M P(Moderator)",],
         capacity: "100 attendees",
-        registrationLink: "https://makemypass.com/event/panel-1"
+        registrationLink: "https://makemypass.com/event/panel-discussion-1"
       },
       {
         title: "The Entrepreneurship Blueprint",
@@ -93,7 +93,7 @@ const categories: Category[] = [
         description: "",
         speakers: [ "Nadeem Safran Kongath(Karikk)","Saima Nadeem (Edhwi)", "Cristhina Cheriyan (Twenty Four News)","sreepriya (Pehiya Foundation) "],
         capacity: "100 attendees",
-        registrationLink: "https://makemypass.com/event/panel-2"
+        registrationLink: "https://makemypass.com/event/panel-discussion-2"
       },
     ],
   },

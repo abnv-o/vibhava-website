@@ -22,14 +22,14 @@ const speakers: Speaker[] = [
   {
     id: "1",
     name: "Sunil Mathayi",
-    role: "Tradetalks with Sunil",
-    company: "TechCorp",
+    role: "Founder,CEO",
+    company: "Tradetalks",
     image: "/speakers/speaker1.jpg",
-    bio: "Leading AI research initiatives and developing cutting-edge solutions for real-world problems.",
+    bio: "With 4.5+ years in fintech, Sunil Mathayi leads TradeTalks in revolutionizing trading technology. An expert in Core Java and Web Development, he brings innovation, strategic insight, and a passion for market disruption.  ",
     social: {
-      twitter: "https://twitter.com/sarahchen",
-      linkedin: "https://linkedin.com/in/sarahchen",
-      website: "https://sarahchen.com"
+      // twitter: "https://twitter.com/sarahchen",
+      // linkedin: "https://linkedin.com/in/sarahchen",
+      // website: "https://sarahchen.com"
     }
   },
   {
@@ -40,41 +40,41 @@ const speakers: Speaker[] = [
     image: "/speakers/speaker2.jpg",
     bio: "Serial entrepreneur with multiple successful exits. Passionate about sustainable technology.",
     social: {
-      twitter: "https://twitter.com/alexturner",
-      linkedin: "https://linkedin.com/in/alexturner"
+      // twitter: "https://twitter.com/alexturner",
+      // linkedin: "https://linkedin.com/in/alexturner"
     }
   },
   {
     id: "3",
-    name: "Jacob",
-    role: "Sustainability Expert",
-    company: "EcoTech",
+    name: "Jacob Thomas",
+    role: "Delivery Manager",
+    company: "Tata Consultancy Services",
     image: "/speakers/speaker3.jpg",
-    bio: "Pioneering sustainable technology solutions and advocating for environmental responsibility.",
+    bio: "Starting as a developer, Jacob Thomas has grown into a Project Manager and now excels in Delivery Management. With a passion for Relationship Management and Business Development, he is dedicated to adding value to customers and enhancing the ecosystem.",
     social: {
-      linkedin: "https://linkedin.com/in/michaelgreen",
-      website: "https://michaelgreen.eco"
+      // linkedin: "https://linkedin.com/in/michaelgreen",
+      // website: "https://michaelgreen.eco"
     }
   },
   {
     id: "4",
     name: "Aisha Sameeha",
-    role: "UX Design Director",
-    company: "DesignHub",
+    role: "Founder",
+    company: "Koderfin",
     image: "/speakers/speaker4.jpg",
-    bio: "Award-winning designer focused on creating inclusive and accessible digital experiences.",
+    bio: "As the Founder of Koderfin, Aisha Sameeha is a seasoned Design Thinking consultant, mentor, and coach. With a passion for innovation, he has educated 20,000+ students, developed 5+ startups, and helped 25+ companies transform through Design Thinking. His expertise extends to managing 180+ institutions for Ed clubs, driving impactful change in education and business.",
     social: {
-      twitter: "https://twitter.com/lisapatel",
-      linkedin: "https://linkedin.com/in/lisapatel"
+      // twitter: "https://twitter.com/lisapatel",
+      // linkedin: "https://linkedin.com/in/lisapatel"
     }
   },
   {
     id: "5",
     name: "Alosh Denny",
-    role: "Tech Innovation Lead",
-    company: "FutureTech",
+    role: "AGI Developer",
+    company: "",
     image: "/speakers/speaker5.jpeg",
-    bio: "Driving technological innovation and digital transformation across industries.",
+    bio: "An AI enthusiast and AGI developer, Alosh specializes in Robotics, IoT, and Generative AI. A 2023 & 2024 European Rover Challenge finalist (World Rank 11), he has competed in 30+ hackathons and now pioneers AI-driven healthcare innovation.",
     social: {
       twitter: "https://twitter.com/davidbrown",
       linkedin: "https://linkedin.com/in/davidbrown"

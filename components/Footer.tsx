@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe, Instagram, Mail, Linkedin, Phone } from "lucide-react";
+import { Instagram, Mail, Linkedin, Phone } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    {
-      icon: <Globe className="w-5 h-5" />,
-      label: "Vibhava.cusat.co.in",
-      href: "https://vibhava.cusat.co.in",
-    },
+    // {
+    //   icon: <Globe className="w-5 h-5" />,
+    //   label: "Vibhava.cusat.co.in",
+    //   href: "https://vibhava.cusat.co.in",
+    // },
     {
       icon: <Instagram className="w-5 h-5" />,
       label: "www.instagram.com/vibhava.cusat",

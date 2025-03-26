@@ -19,11 +19,11 @@ const contactPersons = [
 ];
 
 const socialLinks = [
-  {
-    name: "Website",
-    url: "https://vibhava.cusat.co.in",
-    icon: <Mail className="w-5 h-5" />,
-  },
+  // {
+  //   name: "Website",
+  //   url: "https://vibhava.cusat.co.in",
+  //   icon: <Mail className="w-5 h-5" />,
+  // },
   {
     name: "Instagram",
     url: "https://www.instagram.com/vibhava.cusat",
@@ -111,15 +111,15 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  {/* <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
+                  </div> */}
+                  {/* <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Website</h4>
                     <a href="https://vibhava.cusat.co.in" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary transition-colors">
                       vibhava.cusat.co.in
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@ const Contact = () => {
 
             {/* Download Brochure Button */}
             <motion.a
-              href="/brochure.pdf"
+              href="/vibhava_brochure.pdf"
               download
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -189,7 +189,7 @@ const Contact = () => {
                   India - 682022
                 </p>
                 <a 
-                  href="https://maps.google.com/?q=School+of+Engineering+CUSAT"
+                  href="https://maps.app.goo.gl/DSAZNwsXpoQS5hKc8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary-dark text-sm mt-2 inline-block"

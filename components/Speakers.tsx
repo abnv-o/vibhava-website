@@ -25,7 +25,7 @@ const speakers: Speaker[] = [
     role: "Founder,CEO",
     company: "Tradetalks",
     image: "/speakers/speaker1.jpg",
-    bio: "With 4.5+ years in fintech, Sunil Mathayi leads TradeTalks in revolutionizing trading technology. An expert in Core Java and Web Development, he brings innovation, strategic insight, and a passion for market disruption.  ",
+    bio: "",
     social: {
       // twitter: "https://twitter.com/sarahchen",
       // linkedin: "https://linkedin.com/in/sarahchen",
@@ -34,11 +34,11 @@ const speakers: Speaker[] = [
   },
   {
     id: "2",
-    name: "Kohler",
-    role: "Startup Founder",
-    company: "InnovateX",
+    name: "Kerstin Silvia Koehler",
+    role: "Regional Head",
+    company: "KiREAP",
     image: "/speakers/speaker2.jpg",
-    bio: "Serial entrepreneur with multiple successful exits. Passionate about sustainable technology.",
+    bio: "",
     social: {
       // twitter: "https://twitter.com/alexturner",
       // linkedin: "https://linkedin.com/in/alexturner"
@@ -50,7 +50,7 @@ const speakers: Speaker[] = [
     role: "Delivery Manager",
     company: "Tata Consultancy Services",
     image: "/speakers/speaker3.jpg",
-    bio: "Starting as a developer, Jacob Thomas has grown into a Project Manager and now excels in Delivery Management. With a passion for Relationship Management and Business Development, he is dedicated to adding value to customers and enhancing the ecosystem.",
+    bio: "",
     social: {
       // linkedin: "https://linkedin.com/in/michaelgreen",
       // website: "https://michaelgreen.eco"
@@ -62,7 +62,7 @@ const speakers: Speaker[] = [
     role: "Founder",
     company: "Koderfin",
     image: "/speakers/speaker4.jpg",
-    bio: "As the Founder of Koderfin, Aisha Sameeha is a seasoned Design Thinking consultant, mentor, and coach. With a passion for innovation, he has educated 20,000+ students, developed 5+ startups, and helped 25+ companies transform through Design Thinking. His expertise extends to managing 180+ institutions for Ed clubs, driving impactful change in education and business.",
+    bio: "",
     social: {
       // twitter: "https://twitter.com/lisapatel",
       // linkedin: "https://linkedin.com/in/lisapatel"
@@ -74,7 +74,7 @@ const speakers: Speaker[] = [
     role: "AGI Developer",
     company: "",
     image: "/speakers/speaker5.jpeg",
-    bio: "An AI enthusiast and AGI developer, Alosh specializes in Robotics, IoT, and Generative AI. A 2023 & 2024 European Rover Challenge finalist (World Rank 11), he has competed in 30+ hackathons and now pioneers AI-driven healthcare innovation.",
+    bio: "",
     social: {
       twitter: "https://twitter.com/davidbrown",
       linkedin: "https://linkedin.com/in/davidbrown"
@@ -83,10 +83,10 @@ const speakers: Speaker[] = [
   {
     id: "6",
     name: "Cristhina Cheriyan",
-    role: "Blockchain Developer",
-    company: "CryptoInnovate",
+    role: "",
+    company: "24 News",
     image: "/speakers/speaker6.jpg",
-    bio: "Expert in blockchain technologies and decentralized application development.",
+    bio: "",
     social: {
       twitter: "https://twitter.com/jessicakim",
       linkedin: "https://linkedin.com/in/jessicakim"
@@ -94,11 +94,11 @@ const speakers: Speaker[] = [
   },
   {
     id: "7",
-    name: "Dhanya",
-    role: "IoT Specialist",
-    company: "ConnectedWorld",
+    name: "Dr.Dhanya K Sudish",
+    role: "AI ML Enthusiast",
+    company: "KiREAP",
     image: "/speakers/speaker7.jpg",
-    bio: "Implementing innovative IoT solutions for smart cities and sustainable environments.",
+    bio: "",
     social: {
       linkedin: "https://linkedin.com/in/robertmartinez",
       website: "https://robertmartinez.tech"
@@ -106,11 +106,11 @@ const speakers: Speaker[] = [
   },
   {
     id: "8",
-    name: "Mehar Moosa",
-    role: "AI Ethics Researcher",
-    company: "EthicalTech",
+    name: "Moosa Mehar M P",
+    role: "Co-Founder",
+    company: "TinkerHub Foundation",
     image: "/speakers/speaker8.jpg",
-    bio: "Researching the ethical implications of AI and advocating for responsible technology adoption.",
+    bio: "",
     social: {
       twitter: "https://twitter.com/sophialee",
       linkedin: "https://linkedin.com/in/sophialee"
@@ -118,22 +118,22 @@ const speakers: Speaker[] = [
   },
   {
     id: "9",
-    name: "Nadeem Ashraf",
-    role: "AR/VR Engineer",
-    company: "ImmersiveTech",
+    name: "Nadeem Safran Kongath",
+    role: "Founder",
+    company: "Karikk",
     image: "/speakers/speaker9.jpg",
-    bio: "Creating immersive experiences through augmented and virtual reality technologies.",
+    bio: "",
     social: {
       linkedin: "https://linkedin.com/in/jameswilson"
     }
   },
   {
     id: "10",
-    name: "Pawan",
-    role: "Data Science Director",
-    company: "DataVision",
+    name: "Pawan Seshadri",
+    role: "CEO",
+    company: "UrbanVind",
     image: "/speakers/speaker10.jpg",
-    bio: "Leading data science initiatives that transform raw data into actionable business insights.",
+    bio: "",
     social: {
       twitter: "https://twitter.com/ananyasharma",
       linkedin: "https://linkedin.com/in/ananyasharma"
@@ -142,10 +142,10 @@ const speakers: Speaker[] = [
   {
     id: "11",
     name: "Rail Rolls",
-    role: "Cybersecurity Expert",
-    company: "SecureNet",
+    role: "",
+    company: "",
     image: "/speakers/speaker11.jpg",
-    bio: "Protecting organizations from emerging cyber threats through innovative security solutions.",
+    bio: "",
     social: {
       linkedin: "https://linkedin.com/in/carlosrodriguez",
       website: "https://carlosrodriguez.security"
@@ -154,10 +154,10 @@ const speakers: Speaker[] = [
   {
     id: "12",
     name: "Saima Nadeem",
-    role: "Product Design Lead",
-    company: "UserFirst",
+    role: "Founder",
+    company: "Edhwi",
     image: "/speakers/speaker12.jpg",
-    bio: "Creating intuitive product experiences that blend aesthetics with functionality.",
+    bio: "",
     social: {
       twitter: "https://twitter.com/emmathompson",
       linkedin: "https://linkedin.com/in/emmathompson"
@@ -165,11 +165,11 @@ const speakers: Speaker[] = [
   },
   {
     id: "13",
-    name: "Sreepriya",
-    role: "Quantum Computing Lead",
-    company: "QuantumTech",
+    name: "Sreepriya Radhakrishnan",
+    role: "Founder",
+    company: "Pehiya Foundation",
     image: "/speakers/speaker13.jpg",
-    bio: "Exploring the frontiers of quantum computing and its applications in solving complex problems.",
+    bio: "",
     social: {
       linkedin: "https://linkedin.com/in/rajpatel",
       website: "https://rajpatel.quantum"

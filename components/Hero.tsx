@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Rocket, Lightbulb, Code } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -116,6 +117,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
+            <Link href="#events">
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -128,14 +130,15 @@ const Hero = () => {
                 </svg>
               </span>
             </motion.button>
+            </Link>
             
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="bg-white text-gray-800 border border-gray-200 px-8 py-3 rounded-lg font-medium hover:border-primary/50 transition-all shadow-sm hover:shadow-md"
             >
               Register Interest
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         </div>
 

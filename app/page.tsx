@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-// import About from "@/components/About";
+import About from "@/components/About";
 import Events from "@/components/Events";
-// import Speakers from "@/components/Speakers";
+import Speakers from "@/components/Speakers";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,9 +10,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      {/* <About /> */}
+      <About />
       <Events />
-      {/* <Speakers /> */}
+      <Speakers />
       <Footer />
     </main>
   );

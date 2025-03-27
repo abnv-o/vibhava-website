@@ -22,6 +22,8 @@ const Navbar = () => {
     { name: "Home", href: "/#home" },
     { name: "Events", href: "/#events" },
     { name: "Contact", href: "/contact" },
+    { name: "Leaderboard", href: "https://backend-recapped.onrender.com/leaderboard" },
+    { name: "Wrapped", href: "https://vibhava-memoirs.vercel.app/" },
   ];
 
   return (
